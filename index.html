@@ -1,0 +1,111 @@
+<html>
+<meta charset='UTF-8' />
+<meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport' />
+<meta content='IE=edge' http-equiv='X-UA-Compatible' />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+<link href="https://alo.likeadream.repl.co/style.css" rel="stylesheet" type="text/css" />
+
+<head></head>
+</head>
+
+<body>
+    <style>
+        body {
+            background-image: url("https://i.postimg.cc/bNLgzBxV/IMG-20211206-061318-028.jpg");
+            background-repeat: no-repeat;
+            animation: none;
+            background-size: 100% 100% 100%;
+        }
+    </style>
+
+    <div id='Content'>
+        <div class="foto">
+            <div class="image">
+                <!-- Foto Atas --><img src="https://i.postimg.cc/vBvfHNBf/otopet.gif" width="110px" height="110px" /></div>
+        </div>
+
+        <div id='pergeseran'>
+            <p><i>Geser &#128073;</i></p>
+            <p>Halo Rida ~</p>
+            <p>Kamu marah ya? &#129402;</p>
+            <p>Jangan lama-lama dong ngambeknya &#129303;</p>
+            <p>Nanti lucunya ilang loh 😂</p>
+            <p>Candaaa wleee</p>
+            <p>Gaboleh ngambek lagi ya &#128545;</p>
+            <p>Yang di sininya kangen loh :p</p>
+            <p>Maafin aku yaaa</p>
+            <p>Baikan lagi ya? &#129402;</p>
+            <p>Jawaban &#128073; <a id="tm" onClick='pmau();'>[ Iyaa ]</a><a id="tm" onClick='pgak();'>[ Gamau ]</a></p>
+        </div>
+    </div>
+
+    <script>
+        //Audio Link MP3
+        function play() {
+            var audio = new Audio('sorry.mp3');
+            audio.play();
+            audio.loop = true;
+            audio.addEventListener('ended', function() {
+                this.currentTime = 0;
+                this.play();
+            }, false);
+        }
+        const swals = Swal.mixin({
+            cancelButtonColor: '#909090',
+            confirmButtonColor: '#00B487',
+            allowOutsideClick: false,
+        });
+
+        async function pmau() {
+            await swals.fire({
+                title: 'Yeaaayy ',
+                text: 'Makasii yaaa 💖',
+                imageUrl: 'https://i.postimg.cc/MG82gJ44/cute-panda.gif',
+                imageWidth: 150,
+                imageHeight: 150,
+            });
+            await swals.fire('Kirim chat ke no WhatsApp aku ya cantik!');
+            window.location = "https://api.whatsapp.com/send?phone=&text=Aku udah liat semuanya nih" + "%0A%0A" + "Aku maafin kamuuu 🤗";
+        }
+
+        async function pgak() {
+            await swals.fire('Yahhh :(');
+            await swals.fire('Yaudah deh <3');
+        }
+
+        async function start() {
+            await swals.fire('Halo ツ');
+            setTimeout(mulai, 900);
+            play();
+        }
+        start();
+    </script>
+
+    <script>
+        function showDiv() {
+            document.getElementById('Content').style.opacity = "1";
+        }
+
+        function iloveu() {
+            document.getElementById('sp1').style.display = "none";
+            document.getElementById('sp2').style.display = "block";
+            document.getElementById('text2').style.display = "none";
+        }
+
+        function mulai() {
+            ketiknm();
+            showDiv();
+        }
+
+        function ketiknm() {
+            document.getElementById('pergeseran').style.opacity = "1";
+            document.getElementById('pergeseran').style.visibility = "visible";
+            document.getElementById('pergeseran').style.margin = "50px 0 0 0";
+        }
+    </script>
+</body>
+
+</html>
